@@ -13,7 +13,7 @@ import static com.example.constans.ExpectedValues.EXPECTED_PREDATOR_FOODS;
 @RunWith(MockitoJUnitRunner.class)
 public class FelineTest {
     @Test
-    public void eatMeat_Returns_Predator_FoodKinds() throws Exception {
+    public void eatMeatReturnsPredatorFoodKinds() throws Exception {
         // Arrange
         Feline feline = new Feline();
 
@@ -27,7 +27,7 @@ public class FelineTest {
     }
 
     @Test
-    public void getFamily_ReturnsCorrectFamilyType() {
+    public void getFamilyReturnsCorrectFamilyType() {
         // Arrange
         Feline feline = new Feline();
 
@@ -41,7 +41,7 @@ public class FelineTest {
     }
 
     @Test
-    public void getKittens_ReturnsCorrectKittensCount() {
+    public void getKittensReturnsCorrectKittensCount() {
         // Arrange
         Feline feline = new Feline();
 
@@ -56,7 +56,7 @@ public class FelineTest {
 
 
     @Test
-    public void getKittens_WithSpecificCount_ReturnsCorrectKittensCount() {
+    public void getKittensWithSpecificCountReturnsCorrectKittensCount() {
         // Arrange
         Feline feline = new Feline();
 

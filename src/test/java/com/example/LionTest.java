@@ -26,7 +26,7 @@ public class LionTest {
 
     @Test
     @Parameters({"Самец,true", "Самка,false"})
-    public void Lion_Creation_With_Specific_Sex_Set_Correct_Lion_Sex(String sex, Boolean hasMane) throws Exception {
+    public void lionCreationWithSpecificSexSetCorrectLionSex(String sex, Boolean hasMane) throws Exception {
         // Arrange
         // Action
         Lion lion = new Lion(sex, feline);
@@ -40,7 +40,7 @@ public class LionTest {
     public ExpectedException expectedEx = ExpectedException.none();
     @Test
     @Parameters({"НебинарныйЛьвенок"})
-    public void lion_Creation_With_Specific_Sex_Throws_Exception(String sex) throws Exception {
+    public void lionCreationWithSpecificSexThrowsException(String sex) throws Exception {
         // Arrange
         expectedEx.expect(Exception.class);
         expectedEx.expectMessage(IncorrectLionSexExceptionMessage);
@@ -51,7 +51,7 @@ public class LionTest {
 
     @Test
     @Parameters({"Самец", "Самка"})
-    public void getKittens_Returns_Correct_Kittens_Count (String sex) throws Exception {
+    public void getKittensReturnsCorrectKittensCount (String sex) throws Exception {
         // Arrange
         Mockito.when(feline.getKittens()).thenReturn(1);
 
@@ -67,7 +67,7 @@ public class LionTest {
 
     @Test
     @Parameters({"Самец", "Самка"})
-    public void getFood_Returns_Correct_Kittens_Count (String sex) throws Exception {
+    public void getFoodReturnsCorrectKittensCount (String sex) throws Exception {
         // Arrange
         Mockito.when(feline.getFood(AnimalKinds.PREDATOR)).thenReturn(EXPECTED_PREDATOR_FOODS);
 

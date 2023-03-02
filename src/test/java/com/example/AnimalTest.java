@@ -17,7 +17,7 @@ public class AnimalTest {
 
     @Test
     @Parameters({AnimalKinds.PREDATOR, AnimalKinds.HERBIVORE })
-    public void getFood_Returns_Correct_Food_Kinds_For_Specific_Kind_Of_Animal(String animalKind) throws Exception {
+    public void getFoodReturnsCorrectFoodKindsForSpecificKindOfAnimal(String animalKind) throws Exception {
         // Arrange
         Animal animal = new Animal();
 
@@ -40,7 +40,7 @@ public class AnimalTest {
 
     @Test
     @Parameters({"НеизвестноеЖивотное"})
-    public void getFood_Throws_Exception_If_Animal_Kind_Is_Incorrect(String animalKind) throws Exception {
+    public void getFoodThrowsExceptionIfAnimalKindIsIncorrect(String animalKind) throws Exception {
         // Arrange
         expectedEx.expect(Exception.class);
         expectedEx.expectMessage(IncorrectAnimalKindExceptionMessage);
@@ -53,7 +53,7 @@ public class AnimalTest {
     }
 
     @Test
-    public void getFamily_Returns_Correct_Value() {
+    public void getFamilyReturnsCorrectValue() {
         // Arrange
         Animal animal = new Animal();
 

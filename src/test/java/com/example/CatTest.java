@@ -18,9 +18,8 @@ public class CatTest {
     @Spy
     Feline felineSpy = new Feline();
 
-
     @Test
-    public void getSound_ReturnsCorrectSound() {
+    public void getSoundReturnsCorrectSound() {
         // Arrange
         Cat cat = new Cat(feline);
 
@@ -33,7 +32,7 @@ public class CatTest {
     }
 
     @Test
-    public void getFood_PredatorEatMeat_CallsCorrectly() throws Exception {
+    public void getFoodPredatorEatMeatCallsCorrectly() throws Exception {
         // Arrange
         Cat cat = new Cat(feline);
         Mockito.when(feline.eatMeat()).thenReturn(EXPECTED_PREDATOR_FOODS);
@@ -49,7 +48,7 @@ public class CatTest {
     }
 
     @Test
-    public void getFood_PredatorEatMeat_ReturnsCorrectly_FoodKinds() throws Exception {
+    public void getFoodPredatorEatMeatReturnsCorrectlyFoodKinds() throws Exception {
         // Arrange
         Cat cat = new Cat(felineSpy);
 
